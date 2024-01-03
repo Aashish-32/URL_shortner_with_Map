@@ -5,7 +5,7 @@ This is a simple URL shortener service built with Go and Fiber.
 - Go installed (https://golang.org/doc/install)
 - Fiber package (github.com/gofiber/fiber/v2) installed
 
-Steps:
+### Steps:
 1. Clone the repository:
  git clone https://github.com/Aashish-32/URL-ShortenerMap.git
 2.
