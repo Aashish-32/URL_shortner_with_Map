@@ -30,5 +30,23 @@ go mod tidy
 2. Run the tests:
 ```
  go test ./handlers/
+```
+
+## API Endpoints
+- ### POST /shorten - Shorten a URL
+  -Request Body
+  ```
+  {
+    "long_url": "https://example.com"
+}
+  ```
+
+
+Request Body:
+
+
+
+
+## Project Structure
 
 
