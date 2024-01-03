@@ -10,7 +10,9 @@ This is a simple URL shortener service built with Go and Fiber.
 ```
 git clone https://github.com/Aashish-32/URL-ShortenerMap.git
 ```
- 
-3. Navigate to the project directory:
-cd URL-ShortenerMap
+2. Navigate to the project directory
+3.Run the service:
+```
+go run main.go
+'''
 
