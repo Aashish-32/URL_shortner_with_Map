@@ -20,3 +20,15 @@ go run main.go
 ```
 The service will start running on http://localhost:8080.
 
+## Running Tests
+To run tests for this service, follow these steps:
+
+1. Make sure you have the required packages installed by running:
+```
+go mod tidy
+```
+2. Run the tests:
+```
+ go test ./handlers/
+
+
