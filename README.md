@@ -7,8 +7,10 @@ This is a simple URL shortener service built with Go and Fiber.
 
 ### Steps:
 1. Clone the repository:
- git clone https://github.com/Aashish-32/URL-ShortenerMap.git
-2.
+```bash
+git clone https://github.com/Aashish-32/URL-ShortenerMap.git
+```
+ 
 3. Navigate to the project directory:
 cd URL-ShortenerMap
 
