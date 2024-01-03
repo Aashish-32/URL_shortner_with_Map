@@ -11,6 +11,9 @@ This is a simple URL shortener service built with Go and Fiber.
 git clone https://github.com/Aashish-32/URL_shortner_with_Map.git
 ```
 2. Navigate to the project directory
+   ```
+   cd URL_shortner_with_Map/
+```
 3.Run the service:
 ```
 go run main.go
