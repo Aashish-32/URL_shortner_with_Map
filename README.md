@@ -14,7 +14,11 @@ git clone https://github.com/Aashish-32/URL_shortner_with_Map.git
 ```
 cd URL_shortner_with_Map
 ```
-3.Run the service:
+3. Make sure you have the required packages installed by running:
+```
+go mod tidy
+```
+4.Run the service:
 ```
 go run main.go
 ```
@@ -23,10 +27,7 @@ The service will start running on http://localhost:8080.
 ## Running Tests
 To run tests for this service, follow these steps:
 
-1. Make sure you have the required packages installed by running:
-```
-go mod tidy
-```
+
 2. Run the tests:
 ```
  go test ./handlers/
