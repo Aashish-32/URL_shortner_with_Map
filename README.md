@@ -55,10 +55,10 @@ go mod tidy
 
 
 ## Project Structure
-- URL-ShortenerMap/
+- URL-shortener_with_Map/
     - main.go
     - handlers/
-        - handlers.go
+        - shortner.go
         - resolver.go
         - handlers_test.go
     - helpers/
