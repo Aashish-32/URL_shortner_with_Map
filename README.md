@@ -55,5 +55,16 @@ go mod tidy
 
 
 ## Project Structure
+- URL-ShortenerMap/
+    - main.go
+    - handlers/
+        - handlers.go
+        - resolver.go
+        - handlers_test.go
+    - helpers/
+        - encode.go
+    - routes/
+        - routes.go
+
 
 
