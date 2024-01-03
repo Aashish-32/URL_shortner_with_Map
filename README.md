@@ -42,11 +42,14 @@ go mod tidy
   ```
   - Response:
   ```
-  "short_url": "http://localhost:8080/abc",
-    "long_url": "https://example.com"
+  "short_url": "http://localhost:8080/abc"
+    "long_url": "https://encyclopedia2.thefreedictionary.com"
+  
   
   ```
-  
+
+- ### GET /:url-Resolve a shortened URL
+  - Redirects to the original long URL if found.
 
 
 
