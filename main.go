@@ -10,5 +10,7 @@ func main() {
 	app := fiber.New()
 	routes.SetupRoutes(app)
 
-	panic(app.Listen(":8080"))
+	if err := app.Listen(":8080"); err != nil {
+		panic(err)
+	}
 }
