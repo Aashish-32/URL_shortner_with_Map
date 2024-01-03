@@ -34,15 +34,19 @@ go mod tidy
 
 ## API Endpoints
 - ### POST /shorten - Shorten a URL
-  -Request Body
+  - Request Body
   ```
   {
     "long_url": "https://example.com"
-}
+  }
   ```
-
-
-Request Body:
+  - Response:
+  ```
+  "short_url": "http://localhost:8080/abc",
+    "long_url": "https://example.com"
+  
+  ```
+  
 
 
 
