@@ -15,6 +15,8 @@ type RequestPayload struct {
 	LongURL string `json:"long_url"`
 }
 
+// Data structure for in-memory storage o URLs
+
 var (
 	UrlStorage = make(map[string]string)
 )
@@ -37,6 +39,7 @@ func ShortenURL(c *fiber.Ctx) error {
 	}
 
 	shortURL := generateShortURL(body.LongURL)
+
 	UrlStorage[shortURL] = body.LongURL
 	return c.Status(fiber.StatusCreated).JSON(fiber.Map{
 		"short_url": shortURL,
@@ -47,8 +50,18 @@ func ShortenURL(c *fiber.Ctx) error {
 
 func generateShortURL(longURL string) string {
 
+	//Checking for Repeated URL
+
+	for shortcode, longcode := range UrlStorage {
+		if longcode == longURL {
+			return fmt.Sprintf("http://localhost:8080/%s", shortcode)
+
+		}
+	}
+
 	id := len(UrlStorage)
 	shortCode := helpers.Base62Encode(id)
+
 	UrlStorage[shortCode] = longURL
 
 	return fmt.Sprintf("http://localhost:8080/%s", shortCode)

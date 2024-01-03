@@ -2,5 +2,8 @@ POST  http://localhost:8080/shorten
 content-type: application/json
 
 {
-    "long_url": "https://www.googhuguuygyuglefd.com"
+    "long_url": "http://localhost:8080/www.google.com"
 }
+###
+
+GET  http://localhost:8080/c
