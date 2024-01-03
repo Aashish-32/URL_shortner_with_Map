@@ -1,28 +1,24 @@
-package controllers
+package handlers
 
 import (
 	"fmt"
 
 	"github.com/Aashish-32/URL-ShortenerMap/helpers"
-	"github.com/gofiber/fiber/v2"
-
 	"github.com/asaskevich/govalidator"
+	"github.com/gofiber/fiber/v2"
 )
 
-//A structure for the httpRequest payload
-
+// A structure for the HTTP request payload
 type RequestPayload struct {
 	LongURL string `json:"long_url"`
 }
 
-// Data structure for in-memory storage o URLs
-
+// Data structure for in-memory storage of URLs
 var (
 	UrlStorage = make(map[string]string)
 )
 
 func ShortenURL(c *fiber.Ctx) error {
-
 	body := new(RequestPayload)
 
 	err := c.BodyParser(&body)
@@ -45,22 +41,25 @@ func ShortenURL(c *fiber.Ctx) error {
 		"short_url": shortURL,
 		"long_url":  body.LongURL,
 	})
-
 }
 
 func generateShortURL(longURL string) string {
+	id := len(UrlStorage)
+	shortCode := helpers.Base62Encode(id)
 
-	//Checking for Repeated URL
+	//checking for repeated URLS
 
-	for shortcode, longcode := range UrlStorage {
-		if longcode == longURL {
+	for shortcode, Storedlongurl := range UrlStorage {
+		if Storedlongurl == longURL {
 			return fmt.Sprintf("http://localhost:8080/%s", shortcode)
-
 		}
 	}
 
-	id := len(UrlStorage)
-	shortCode := helpers.Base62Encode(id)
+	//appending htttp so that user can shorten urls without having to type http:// or https://
+
+	if len(longURL) >= 8 && longURL[:7] != "http://" && longURL[:8] != "https://" {
+		longURL = "http://" + longURL
+	}
 
 	UrlStorage[shortCode] = longURL
 
