@@ -14,5 +14,6 @@ git clone https://github.com/Aashish-32/URL-ShortenerMap.git
 3.Run the service:
 ```
 go run main.go
-'''
+```
+The service will start running on http://localhost:8080.
 
