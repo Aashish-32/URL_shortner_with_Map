@@ -28,7 +28,7 @@ The service will start running on http://localhost:8080.
 To run tests for this service, follow these steps:
 
 
-2. Run the tests:
+1. Run the tests:
 ```
  go test ./handlers/
 ```
