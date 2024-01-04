@@ -1,5 +1,5 @@
 # URL Shortener Service
-This is a simple URL shortener service built with Go and Fiber.
+This is a simple URL shortener service built with Go and Fiber using base62 encoding.
 ## Running the Service
 ### Prerequisites
 - Go installed (https://golang.org/doc/install)
